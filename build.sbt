@@ -40,6 +40,7 @@ lazy val root = tlCrossRootProject
 
 lazy val core = crossProject(JVMPlatform)
   .in(file("modules/core"))
+  .settings(headerSettings)
   .settings(name := "spies")
   .jvmSettings(
     libraryDependencies ++= Seq(
@@ -54,6 +55,7 @@ lazy val core = crossProject(JVMPlatform)
 
 lazy val circe = crossProject(JVMPlatform)
   .in(file("modules/circe"))
+  .settings(headerSettings)
   .settings(name := "spies-circe")
   .jvmSettings(
     libraryDependencies ++= Seq(
@@ -62,3 +64,12 @@ lazy val circe = crossProject(JVMPlatform)
     )
   )
   .dependsOn(core)
+
+lazy val headerSettings = Seq(
+  headerLicense := Some(
+    HeaderLicense.Custom(
+      "Copyright 2025 Magine Pro\n" +
+        HeaderLicense.ALv2("2026", "Viktor Rudebeck", HeaderLicenseStyle.Detailed).text
+    )
+  )
+)

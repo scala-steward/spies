@@ -14,7 +14,7 @@ libraryDependencies ++= Seq(
 )
 ```
 
-Make sure to replace `spiesVersion` with a [release version](https://github.com/maginepro/spies/releases).
+Make sure to replace `spiesVersion` with a [release version](https://github.com/vlovgr/spies/releases).
 
 ## Quick Example
 
@@ -42,3 +42,11 @@ The example demonstrates support for check-and-set (CAS) operations. Some update
 Note the example communicates with a local Memcached instance, using the default protocol. When dealing with Memcached clusters, you can use `Memcached.ketama` to use the [Ketama](https://www.last.fm/user/RJ/journal/2007/04/10/rz_libketama_-_a_consistent_hashing_algo_for_memcache_clients) consistent hashing algorithm to consistently map keys to servers, even when Memcached servers are added or removed from the cluster (only a small proportion of keys end up mapping to different servers).
 
 Spies is based on the [Amazon ElastiCache Cluster Client](https://github.com/awslabs/aws-elasticache-cluster-client-memcached-for-java) which supports node [auto discovery](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/AutoDiscovery.html) by default.
+
+## License
+
+Copyright 2025 Magine Pro<br>
+Copyright 2026 Viktor Rudebeck
+
+Licensed under the [Apache License, Version 2.0](license.txt).<br>
+Created by [Viktor Rudebeck](https://github.com/vlovgr) at [Magine Pro](https://github.com/maginepro) and independently maintained since 2026.
